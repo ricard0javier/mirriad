@@ -36,8 +36,6 @@ dependencies {
             "com.fasterxml.jackson.core:jackson-databind",
             "org.projectlombok:lombok:1.16.6",
             "net.sf.dozer:dozer:5.4.0",
-            "io.springfox:springfox-swagger:2.2.2",
-            "io.springfox:springfox-swagger-ui:2.2.2"
     ])
 
     testCompile([

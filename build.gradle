@@ -1,0 +1,48 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'spring-boot'
+apply plugin: 'application'
+
+sourceCompatibility = 1.8
+version = '1.0'
+
+buildscript {
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'org.springframework.boot:spring-boot-gradle-plugin:1.2.3.RELEASE'
+    }
+
+}
+
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+
+    configurations {
+        compile.exclude group:'ch.qos.logback'
+        compile.exclude group:'org.slf4j', module:'log4j-over-slf4j'
+    }
+
+    compile([
+            "org.springframework.boot:spring-boot-starter-web:1.3.0.RELEASE",
+            "com.fasterxml.jackson.core:jackson-databind",
+            "org.projectlombok:lombok:1.16.6",
+            "net.sf.dozer:dozer:5.4.0",
+            "io.springfox:springfox-swagger:2.2.2",
+            "io.springfox:springfox-swagger-ui:2.2.2"
+    ])
+
+    testCompile([
+        "org.springframework.boot:spring-boot-starter-test:1.3.0.RELEASE",
+        "com.jayway.jsonpath:json-path:2.1.0"
+    ])
+
+}

@@ -1,0 +1,13 @@
+logging:
+    level.: WARN
+    level.com.mirriad: TRACE
+
+rules:
+  getThreeInOfferForTwo: 100,200
+  getTwoForLess:
+    discountRate: 0.25
+  configurable:
+    n: 5
+    x: 100
+    k: 2
+    y: 200
